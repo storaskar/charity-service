@@ -1,0 +1,20 @@
+{
+  "name": "charity-service",
+  "version": "1.0.0",
+  "description": "Backend service for charity explorer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "author": "Shilpa Toraskar",
+  "license": "",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.2",
+    "swagger-jsdoc": "^1.9.7",
+    "winston": "^2.4.2"
+  }
+}
