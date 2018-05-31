@@ -52,7 +52,7 @@ app.get('/', function(req, res) {
 });
 
 // Routes
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/api/users', require('./routes/users') );
 app.use('/api/charities', require('./routes/charities') );
 app.use('/api/donations', require('./routes/donation.js') );
