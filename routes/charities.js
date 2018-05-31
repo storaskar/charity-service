@@ -1,3 +1,7 @@
+'use strict';
+
+require('dotenv').config();
+
 var express = require('express'),
     mongoose = require('mongoose'),
     logger = require('winston');
@@ -7,9 +11,10 @@ var router = express.Router();
 /**
   mongo connect
 */
-mongoose.connect('mongodb://localhost/charity_db', (err) => {
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI, (err) => {
    if (err) throw err;
-   logger.log('Successfully connected');
+   logger.info('Successfully connected to MONGO');
 });
 
 /**
