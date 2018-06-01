@@ -153,5 +153,19 @@ router.post('/create', (req, res, next) => {
   });
 })
 
+/**
+  Delete user
+  */
+router.delete('/:id', (req, res, next) => {
+  UserModel.findByIdAndRemove(   req.params.id,  (err, response)  => {
+    if (err) {
+        logger.error(err);
+    } else {
+      res.writeHead(200, {"Content-Type": "application/json"});
+      res.write(JSON.stringify( { message: 'User deleted!' }));
+      res.end();
+    }
+  })
+});
 
 module.exports = router;

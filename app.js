@@ -65,3 +65,5 @@ app.listen(port, function() {
   // eslint-disable-next-line
   logger.log('info', 'Server running on port: %d', port);
 });
+
+module.exports = app;
